@@ -1,9 +1,6 @@
 /// <reference path="../node_modules/@workadventure/iframe-api-typings/iframe_api.d.ts" />
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
-// The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure.
-bootstrapExtra().catch(e => console.error(e));
-
 console.log('Script started successfully');
 
 // Waiting for the API to be ready
@@ -12,7 +9,7 @@ WA.onInit().then(() => {
     console.log('Player tags: ',WA.player.tags)
 
     // Show configuration tile for editors only
-    if (WA.player.tags.includes('editor')) {
+    if (WA.player.tags.includes('admin')) {
         WA.room.showLayer('exitNorthConfig')
         WA.room.showLayer('exitSouthConfig')
         WA.room.showLayer('exitWestConfig')

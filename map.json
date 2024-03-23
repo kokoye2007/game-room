@@ -1086,7 +1086,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":"src\/main.ts"
+         "value":"script.js"
         }, 
         {
          "name":"tutorial",
